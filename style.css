@@ -1,0 +1,35 @@
+/* static/style.css */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.navbar {
+  background-color: #0288d1;
+  color: white;
+  padding: 10px 20px;
+}
+
+.navbar h1 {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navbar a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+form input, form button {
+  margin: 10px 0;
+  padding: 8px;
+  width: 300px;
+}

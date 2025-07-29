@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Productivity Predictor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #74ebd5, #ACB6E5);
+      color: #333;
+    }
+
+    .navbar {
+      background-color: #2c3e50;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    .navbar h1 {
+      color: white;
+      font-size: 1.8rem;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #f39c12;
+    }
+
+    .main-content {
+      max-width: 1000px;
+      margin: 3rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .main-content h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+      text-align: center;
+    }
+
+    .main-content p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .feature-card {
+      background: #f1f2f6;
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-card i {
+      font-size: 2rem;
+      color: #0984e3;
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      background: #2c3e50;
+      color: white;
+      border-top: 1px solid #ccc;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <h1>About This App</h1>
+    <div>
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('about') }}">About</a>
+      <a href="{{ url_for('predict') }}">Predict</a>
+    </div>
+  </nav>
+
+  <div class="main-content">
+    <h2>Project Overview</h2>
+    <p>
+      This web application utilizes Machine Learning to analyze garment worker data and accurately predict their actual productivity.
+      The goal is to assist factory managers and HR professionals in optimizing productivity and workforce planning.
+    </p>
+
+    <div class="features">
+      <div class="feature-card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Data Driven</h3>
+        <p>Uses real-world data and advanced algorithms for precise productivity predictions.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-user-friends"></i>
+        <h3>User Friendly</h3>
+        <p>Simple form inputs and clean interface designed for non-technical users.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Responsive Design</h3>
+        <p>Fully responsive across devices – from desktop to mobile.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Smart Insight</h3>
+        <p>Provides insights to improve efficiency and reduce idle time in production.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Created by Jayant Rajput | Email: jayantrajput802@gmail.com
+  </footer>
+</body>
+</html>

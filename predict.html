@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict Productivity</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #00796b;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            background: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <h1>Predict Worker Productivity</h1>
+    <form action="/submit" method="POST">
+        <label>Quarter (1-4):</label>
+        <input type="number" name="quarter" min="1" max="4" required>
+
+        <label>Department Encoded 1:</label>
+        <input type="number" name="department" required>
+
+        <label>Day (Encoded):</label>
+        <input type="number" name="day" required>
+
+        <label>Team:</label>
+        <input type="number" name="team" required>
+
+        <label>Targeted Productivity:</label>
+        <input type="number" name="targeted_productivity" step="0.01" required>
+
+        <label>SMV:</label>
+        <input type="number" name="smv" step="0.01" required>
+
+        <label>WIP:</label>
+        <input type="number" name="wip" step="0.01" required>
+
+        <label>Over Time:</label>
+        <input type="number" name="over_time" required>
+
+        <label>Incentive:</label>
+        <input type="number" name="incentive" required>
+
+        <label>Idle Time:</label>
+        <input type="number" name="idle_time" step="0.01" required>
+
+        <label>Idle Men:</label>
+        <input type="number" name="idle_men" required>
+
+        <label>No. of Style Change:</label>
+        <input type="number" name="no_of_style_change" required>
+
+        <label>No. of Workers:</label>
+        <input type="number" name="no_of_workers" step="0.01" required>
+
+        <label>Year (2015):</label>
+        <input type="number" name="year" value="2015" readonly>
+
+        <label>Month (1-12):</label>
+        <input type="number" name="month" min="1" max="12" required>
+
+        <label>Weekday (Encoded):</label>
+        <input type="number" name="weekday" required>
+
+        <label>Department Encoded 2:</label>
+        <input type="number" name="department_2" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

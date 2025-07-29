@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home - Productivity Predictor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: url('https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    .navbar {
+      background-color: rgba(44, 62, 80, 0.95);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    }
+
+    .navbar h1 {
+      color: white;
+      font-size: 1.8rem;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #f39c12;
+    }
+
+    .main-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4rem 2rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      margin: 3rem auto;
+      max-width: 1000px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .text-section {
+      flex: 1;
+      padding: 1rem;
+    }
+
+    .text-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #00cec9;
+    }
+
+    .text-section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .image-section {
+      flex: 1;
+      text-align: center;
+    }
+
+    .image-section img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: rgba(44, 62, 80, 0.95);
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        flex-direction: column;
+        padding: 2rem 1rem;
+      }
+      .image-section {
+        margin-top: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <h1>Garment Worker Productivity</h1>
+    <div>
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('about') }}">About</a>
+      <a href="{{ url_for('predict') }}">Predict</a>
+    </div>
+  </nav>
+
+  <section class="main-content">
+    <div class="text-section">
+      <h2>Welcome to Productivity Prediction App</h2>
+      <p>
+        Predict garment workers' productivity using machine learning.<br>
+        Use the <strong>Predict</strong> page to enter details and get your forecast instantly.
+      </p>
+    </div>
+    <div class="image-section">
+      <img src="https://images.unsplash.com/photo-1574717024654-b6dc29f3d75e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Garment Factory">
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Jayant Rajput | Email: jayantrajput802@gmail.com
+  </footer>
+</body>
+</html>
